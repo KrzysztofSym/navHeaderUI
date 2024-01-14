@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-bg-main: #fdf6f8;
+    --clr-bg-win1: #b988fd;
+    --clr-bh-win2: #fb9ab9;
+    --clr-text-bg: #b861b7;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-bg-main);
+}
+
+.container {
+    min-width: 90%;
+    height: 60%;
+    color: #fff;
+    animation: scaleUp 1s ease-in-out;
+    transition: .3s;
+}
+
+.top, .header {
+    display: flex;
+    align-items: center;
+}
+
+
+.top, .main {
+    width: 100%;
+    min-width: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(to right, var(--clr-bg-win1), var(--clr-bh-win2));
+    padding: 0 1.5rem;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+
+}
+
+
+.center {
+    align-self: flex-start;
+    font-size: .7rem;
+    border: 1px solid #fff;
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    padding: .2rem;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+
+}
+
+.center span {
+    font-size: .6rem;
+}
+
+.center p {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+a {
+    font-size: .8rem;
+    font-weight: 200;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.main {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.main > p {
+    margin-top: 3rem;
+    font-size: .7rem;
+}
+
+.main h2 {
+    font-size: 1.1rem;
+    margin: 0.5rem auto 1rem;
+    font-weight: 500;
+}
+
+.main input {
+    border: none;
+    padding: 0 .5rem;
+    height: 2rem;
+    background-color: var(--clr-text-bg);
+    border-radius: 3px;
+    color: #fff;
+}
+::placeholder {
+    color: lightgray;
+}
+
+.main .input a {
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: .5rem;
+    line-height: 1rem;
+    height: 2rem;
+    border-radius: 3px;
+    margin-left: .1rem;
+}
+
+.main .input a:hover {
+    background-color: var(--clr-text-bg);
+    border-color: var(--clr-text-bg);
+}
+
+.main > span {
+    display: inline-block;
+    font-size: .7rem;
+    margin: .5rem auto 2.5rem;
+    font-weight: 200;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
